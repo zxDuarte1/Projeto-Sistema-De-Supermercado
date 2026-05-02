@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/icons/icon.png" type="image/png">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Sistema de supermercado - Projeto de PABD</title>
+</head>
+
+<body>
+    <header>
+        <h1>MGA² - Sistema para Supermercado</h1>
+
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="areaDeTrabalho">
+            <article id="icons">
+                <div id="iconRealCompra" class="icon-box"> <!-- Realizar Compra -->
+                    <img src="assets/images/icons/realizar-compras.png" alt="realizar-compras.png" class="icon">
+
+                    <p>Realizar <br> Compra</p>
+                </div>
+
+                <div id="iconGerProd" class="icon-box"> <!-- Gerenciar Produto -->
+                    <img src="assets/images/icons/gerenciar-produtos.png" alt="gerenciar-produtos.png" class="icon">
+
+                    <p>Gerenciar <br> Produto</p>
+                </div>
+
+                <div id="iconGerFunc" class="icon-box"> <!-- Gerenciar Funcionários -->
+                    <img src="assets/images/icons/gerenciar-funcionarios.png" alt="gerenciar-funcionarios.png"
+                        class="icon">
+
+                    <p>Gerenciar <br> Funcionário</p>
+                </div>
+
+                <div id="iconGerClientes" class="icon-box"> <!-- Gerenciar Clientes -->
+                    <img src="assets/images/icons/gerenciar-clientes.png" alt="icon.png" class="icon">
+
+                    <p>Gerenciar Clientes</p>
+                </div>
+
+                <div id="iconEmitirRelat" class="icon-box"> <!-- Emissão de Relatórios -->
+                    <img src="assets/images/icons/emissao-de-relatorios.png" alt="emissao-de-relatorios.png"
+                        class="icon">
+
+                    <p>Emissão de Relatórios</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- <section id="realizarCompra">
+            <article id="pg1">
+                <p id="closeBtn">&times;</p>
+
+                <h4></h4>
+
+                <h2>Adicionar Produto a Lista</h2>
+
+                <form id="formAddProdutoLista" action="" method="POST">
+                    <div class="input-box">
+                        <label>Código</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Quantidade</label>
+                        <input type="number" name="quantidade" placeholder="Ex.: 400" required>
+                    </div>
+
+                    <input type="submit" value="Adicionar" name="acao" class="submit-input">
+                </form>
+            </article>
+        </section> -->
+
+        <section id="gerenciarProduto">
+            <article id="gerProd" class="article-functions-box">
+                <p id="closeBtn">&times;</p>
+
+                <h4>Gerenciar Produto</h4>
+
+                <div class="menus">
+                    <button id="insertProd">Cadastrar</button>
+                    <button id="updateProd">Atualizar</button>
+                    <button id="deleteProd">Remover</button>
+                    <button id="selectProd">Consultar</button>
+                </div>
+                
+                <form id="formCadProduto" action="" method="POST">
+                    <h2>Cadastrar Produto</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao" placeholder="Ex.: Feijão com farinha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Valor (unitário):</label>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 70" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Data de Validade:</label>
+                        <input type="date" name="data_validade" required>
+                    </div>
+
+                    <input type="submit" value="Cadastrar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formAtuaProduto" action="" method="POST">
+                    <h2>Atualizar Produto</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao" placeholder="Ex.: Feijão com farinha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Valor (unitário):</label>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 70">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Data de Validade:</label>
+                        <input type="date" name="data_validade">
+                    </div>
+
+                    <input type="submit" value="Atualizar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRemoveProduto" action="" method="POST">
+                    <h2>Remover Produto</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao" placeholder="Ex.: Feijão com farinha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Valor (unitário):</label>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 70">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Data de Validade:</label>
+                        <input type="date" name="data_validade">
+                    </div> -->
+
+                    <input type="submit" value="Remover" name="acao" class="submit-input">
+                </form>
+
+                <form id="formConsulProduto" action="" method="POST">
+                    <h2>Consultar Produto</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao" placeholder="Ex.: Feijão com farinha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Valor (unitário):</label>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 70">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Data de Validade:</label>
+                        <input type="date" name="data_validade">
+                    </div> -->
+
+                    <input type="submit" value="Consultar" name="acao" class="submit-input">
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
