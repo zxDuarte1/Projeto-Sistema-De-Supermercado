@@ -1,0 +1,7 @@
+
+RF05 – Emissão de relatórios:
+•	Emitir Relatório de Vendas
+•	Emitir Relatório de Produtos Mais	Vendidos
+•	Emitir Relatório de Produtos em Falta
+•	Emitir Relatório de Produtos Sem Venda
+•	Emitir Relatório de Produtos Vencidos

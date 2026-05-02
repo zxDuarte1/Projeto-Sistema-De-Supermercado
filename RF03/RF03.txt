@@ -1,0 +1,3 @@
+RF03 – Gerenciar Funcionários:
+Permitir o cadastro, atualização, remoção e consulta de um funcionário. 
+Campos: matrícula, nome, endereço.

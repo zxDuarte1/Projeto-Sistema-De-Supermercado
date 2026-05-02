@@ -1,0 +1,3 @@
+RF02 – Gerenciar Produto:
+Permitir o cadastro, atualização, remoção e consulta de um produto. 
+Campos: código, descrição, valor_unitário, data_vencimento.

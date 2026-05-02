@@ -1,0 +1,4 @@
+RF04 – Gerenciar Clientes:
+
+Permitir o cadastro, atualização, remoção e consulta de clientes. 
+Campos: cpf, nome, telefone.
