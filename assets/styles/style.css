@@ -432,3 +432,11 @@ body.wp2 {
 body.wp3 {
     background-image: url("/assets/images/wallpaper.jpg");
 }
+
+body.wp4 {
+    background-image: url("/assets/images/wallpaper2.jpg");
+}
+
+body.wp5 {
+    background-image: url("/assets/images/wallpaper3.jpg");
+}
