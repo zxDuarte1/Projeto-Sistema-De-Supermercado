@@ -23,9 +23,7 @@ body {
     position: relative;
 
     /* background-color: rgb(22, 25, 40); */
-    /* background-image: url('../images/bg.jpg'); */
-    /* background-image: url('../images/w10.jpg'); */
-    background-image: url('../images/wallpaper.jpg');
+    background-image: url('../images/bg.jpg');
     /* background-size: 100%; */
     background-size: 130%;
     background-position: center center;
@@ -431,6 +429,7 @@ body.wp2 {
 
 body.wp3 {
     background-image: url("/assets/images/wallpaper.jpg");
+    background-size: 140%;
 }
 
 body.wp4 {
