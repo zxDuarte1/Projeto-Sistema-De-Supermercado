@@ -18,6 +18,20 @@
         </nav>
     </header>
 
+    <div class="wallpaper-container">
+        <div class="wallpaper-box">
+            <img src="assets/images/bg.jpg" alt="wallpaper-1.jpg" class="btn-wallpaper" id="wp1">
+        </div>
+
+        <div class="wallpaper-box">
+            <img src="assets/images/w10.jpg" alt="wallpaper-2.jpg" class="btn-wallpaper" id="wp2">
+        </div>
+
+        <div class="wallpaper-box">
+            <img src="assets/images/wallpaper.jpg" alt="wallpaper-3.jpg" class="btn-wallpaper" id="wp3">
+        </div>
+    </div>
+
     <main>
         <section id="areaDeTrabalho">
             <article id="icons">
@@ -55,33 +69,180 @@
             </article>
         </section>
 
-        <!-- <section id="realizarCompra">
-            <article id="pg1">
-                <p id="closeBtn">&times;</p>
+        <section id="realizarCompra">
+            <article id="realizarCompraArt" class="article-functions-box">
+                <p id="closeBtn" class="close-btn">&times;</p>
 
-                <h4></h4>
+                <h4>Realizar Compra</h4>
 
-                <h2>Adicionar Produto a Lista</h2>
+                <div class="menus real-compra-menu">
+                    <button id="selectProdCompra">Consultar</button>
+                    <button id="insertProdCompra">Adicionar a Lista</button>
+                    <button id="deleteProdCompra">Remover da Lista</button>
+                    <button id="selectProdVencidos">Consultar Vencidos</button>
 
-                <form id="formAddProdutoLista" action="" method="POST">
+                    <button id="finalVenda">(Em breve...) Finalizar Venda</button>
+                    <button id="executePagamento">(Em breve...) Executar Pagamento</button>
+                    <!-- <button id="executeBaixaEstoque">Executar Baixa em Estoque</button> -->
+                    <button id="emitirNotaFiscal">Emitir Nota Fiscal</button>
+                </div>
+                
+                <!-- Consultar Valor de Produto --> 
+                <form id="formConsulProdutoLista" action="" method="POST">
+                    <h2>Consultar (valor de) Produto</h2>
+
                     <div class="input-box">
-                        <label>Código</label>
-                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 1" required>
+                    </div>
+
+                    <input type="submit" value="Consultar" name="acao" class="submit-input">
+                </form>
+
+                <!-- Adicionar Produto a Lista -->
+                <form id="formInsertProdutoLista" action="" method="POST">
+                    <h2>Adicionar Produto a Lista</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 32" required>
                     </div>
 
                     <div class="input-box">
-                        <label>Quantidade</label>
-                        <input type="number" name="quantidade" placeholder="Ex.: 400" required>
+                        <label>Quantidade:</label>
+                        <input type="number" name="quantidade" placeholder="Ex.: 5" required>
                     </div>
 
                     <input type="submit" value="Adicionar" name="acao" class="submit-input">
                 </form>
+
+                <!-- Remover Produto da Lista -->
+                <form id="formDeleteProdutoLista" action="" method="POST">
+                    <h2>Remover Produto da Lista</h2>
+
+                    <div class="input-box">
+                        <label>Credencial do gerente:</label>
+                        <input type="number" name="codigo" id="credGerente" placeholder="Ex.: 33" required>
+                    </div>
+
+                    <div id="areaGerente" class="area-gerente">
+                        <div class="input-box">
+                            <label>Código:</label>
+                            <input type="number" name="codigo" placeholder="Ex.: 32" required>
+                        </div>
+    
+                        <!-- Selecionar na Lista -->
+    
+                        <div class="input-box">
+                            <label>Quantidade:</label>
+                            <input type="number" name="quantidade" placeholder="Ex.: 12" required>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Remover" name="acao" id="removerProdutoLista" class="submit-input">
+                </form>
+                
+                <!-- Consultar Produtos Vencidos -->
+                <form id="formConsulProdutoVencidosLista" action="" method="POST">
+                    <h2>Consultar Produtos Vencidos</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" id="codProdutoVencido" placeholder="Ex.: 2" required>
+                    </div>
+
+                    <div id="result" class="result">
+                        <table border="1">
+                            <tr>
+                                <th>Código</th>
+                                <th>Produto</th>
+                                <th>Descrição</th>
+                                <th>Data de Validade</th>
+                                <th>Estoque</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Feijão</td>
+                                <td>Feijão preto</td>
+                                <td>23/04/2026</td>
+                                <td>100</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Descrição:</label>
+                        <input type="text" name="descricao" placeholder="Ex.: Feijão com farinha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Valor (unitário):</label>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 70">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Data de Validade:</label>
+                        <input type="date" name="data_validade">
+                    </div>  -->
+                    <input type="submit" value="Consultar" name="acao" id="consultarProdutoVencidoLista" class="submit-input">
+                </form>
+
+                <!-- Apenas para demonstração -->
+                <!-- <button id="consultarProdutoVencidoLista" class="submit-input" style="z-index: 100; position: absolute; top: 20px;">Consultar</button> -->
+                
+                <!-- Finalizar Venda -->
+
+
+                <!-- Executar Pagamento -->
+
+
+                <!-- Executar Baixa em Estoque
+                <form id="formDeleteProdutoLista" action="" method="POST">
+                    <h2>Executar Baixa em Estoque</h2>
+
+                    <div id="areaGerente" class="area-gerente">
+                        <div class="input-box">
+                            <label>Código:</label>
+                            <input type="number" name="codigo" placeholder="Ex.: 83" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label>Quantidade:</label>
+                            <input type="number" name="quantidade" placeholder="Ex.: 230" required>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Executar" name="acao" class="submit-input">
+                </form> -->
+
+                <!-- Emitir Nota Fiscal -->
+               
+                <form id="formEmitirNotaFiscal" action="" method="POST">
+                    <h2>Emitir Nota Fiscal</h2>
+
+                    <!-- <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.768.456-64" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
+                </form>
             </article>
-        </section> -->
+        </section>
 
         <section id="gerenciarProduto">
             <article id="gerProd" class="article-functions-box">
-                <p id="closeBtn">&times;</p>
+                <p id="closeBtn" class="close-btn">&times;</p>
 
                 <h4>Gerenciar Produto</h4>
 
@@ -90,6 +251,7 @@
                     <button id="updateProd">Atualizar</button>
                     <button id="deleteProd">Remover</button>
                     <button id="selectProd">Consultar</button>
+                    <button id="baixaEstoque">Executar Baixa em Estoque</button>
                 </div>
                 
                 <form id="formCadProduto" action="" method="POST">
@@ -107,7 +269,7 @@
 
                     <div class="input-box">
                         <label>Valor (unitário):</label>
-                        <input type="number" name="valor_unitario" placeholder="Ex.: 70" required>
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 7,00" required>
                     </div>
 
                     <div class="input-box">
@@ -123,17 +285,17 @@
 
                     <div class="input-box">
                         <label>Código:</label>
-                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                        <input type="number" name="codigo" placeholder="Ex.: 7" required>
                     </div>
 
                     <div class="input-box">
                         <label>Descrição:</label>
-                        <input type="text" name="descricao" placeholder="Ex.: Macarrão com queijo enlatado" required>
+                        <input type="text" name="descricao" placeholder="Ex.: Sanduíche de Presunto" required>
                     </div>
 
                     <div class="input-box">
                         <label>Valor (unitário):</label>
-                        <input type="number" name="valor_unitario" placeholder="Ex.: 70">
+                        <input type="number" name="valor_unitario" placeholder="Ex.: 5.00">
                     </div>
 
                     <div class="input-box">
@@ -149,7 +311,7 @@
 
                     <div class="input-box">
                         <label>Código:</label>
-                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                        <input type="number" name="codigo" placeholder="Ex.: 2" required>
                     </div>
 
                     <!-- <div class="input-box">
@@ -175,7 +337,7 @@
 
                     <div class="input-box">
                         <label>Código:</label>
-                        <input type="number" name="codigo" placeholder="Ex.: 3" required>
+                        <input type="number" name="codigo" placeholder="Ex.: 5" required>
                     </div>
 
                     <!-- <div class="input-box">
@@ -194,6 +356,342 @@
                     </div> -->
 
                     <input type="submit" value="Consultar" name="acao" class="submit-input">
+                </form>
+
+                <!-- Executar Baixa em Estoque -->
+                <form id="formExecutarBaixaEmProduto" action="" method="POST">
+                    <h2>Executar Baixa em Estoque</h2>
+
+                    <div class="input-box">
+                        <label>Código:</label>
+                        <input type="number" name="codigo" placeholder="Ex.: 83" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Quantidade:</label>
+                        <input type="number" name="quantidade" placeholder="Ex.: 230" required>
+                    </div>
+
+                    <input type="submit" value="Executar" name="acao" class="submit-input">
+                </form>
+            </article>
+        </section>
+
+        <section id="gerenciarFuncionarios">
+            <article id="gerFunc" class="article-functions-box">
+                <p id="closeBtn" class="close-btn">&times;</p>
+
+                <h4>Gerenciar Funcionários</h4>
+
+                <div class="menus">
+                    <button id="insertFunc">Cadastrar</button>
+                    <button id="updateFunc">Atualizar</button>
+                    <button id="deleteFunc">Remover</button>
+                    <button id="selectFunc">Consultar</button>
+                </div>
+                
+                <form id="formCadFuncionario" action="" method="POST">
+                    <h2>Cadastrar Funcionário</h2>
+
+                    <div class="input-box">
+                        <label>Matrícula:</label>
+                        <input type="number" name="matricula" placeholder="Ex.: 30212" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: João Pedro" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Endereço:</label>
+                        <input type="number" name="endereco" placeholder="Ex.: Rua 33, Bairro Vila Nova" >
+                    </div>
+
+                    <input type="submit" value="Cadastrar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formAtuaFuncionario" action="" method="POST">
+                    <h2>Atualizar Funcionário</h2>
+
+                    <div class="input-box">
+                        <label>Matrícula:</label>
+                        <input type="number" name="matricula" placeholder="Ex.: 4212" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: José Raul" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Endereço:</label>
+                        <input type="number" name="endereco" placeholder="Ex.: Rua 73, Bairro Bela Vista" >
+                    </div>
+
+                    <input type="submit" value="Atualizar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRemoveFuncionario" action="" method="POST">
+                    <h2>Remover Funcionário</h2>
+
+                    <div class="input-box">
+                        <label>Matrícula:</label>
+                        <input type="number" name="matricula" placeholder="Ex.: 237" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: João Pedro" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Endereço:</label>
+                        <input type="number" name="endereco" placeholder="Ex.: Rua 33, Bairro Vila Nova" >
+                    </div> -->
+
+                    <input type="submit" value="Remover" name="acao" class="submit-input">
+                </form>
+
+                <form id="formConsulFuncionario" action="" method="POST">
+                    <h2>Consultar Funcionário</h2>
+
+                    <div class="input-box">
+                        <label>Matrícula:</label>
+                        <input type="number" name="matricula" placeholder="Ex.: 573" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: João Pedro" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Endereço:</label>
+                        <input type="number" name="endereco" placeholder="Ex.: Rua 33, Bairro Vila Nova" >
+                    </div> -->
+
+                    <input type="submit" value="Consultar" name="acao" class="submit-input">
+                </form>
+            </article>
+        </section>
+
+        <section id="gerenciarClientes">
+            <article id="gerClie" class="article-functions-box">
+                <p id="closeBtn" class="close-btn">&times;</p>
+
+                <h4>Gerenciar Clientes</h4>
+
+                <div class="menus">
+                    <button id="insertClie">Cadastrar</button>
+                    <button id="updateClie">Atualizar</button>
+                    <button id="deleteClie">Remover</button>
+                    <button id="selectClie">Consultar</button>
+                </div>
+                
+                <form id="formCadCliente" action="" method="POST">
+                    <h2>Cadastrar Cliente</h2>
+
+                    <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 027.213.421-74" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Paulo Silva" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92312-3435" >
+                    </div>
+
+                    <input type="submit" value="Cadastrar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formAtuaCliente" action="" method="POST">
+                    <h2>Atualizar Cliente</h2>
+
+                    <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.542.120-44" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div>
+
+                    <input type="submit" value="Atualizar" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRemoveCliente" action="" method="POST">
+                    <h2>Remover Cliente</h2>
+
+                    <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 523.213.654-24" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Remover" name="acao" class="submit-input">
+                </form>
+
+                <form id="formConsulCliente" action="" method="POST">
+                    <h2>Consultar Cliente</h2>
+
+                    <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.768.456-64" required>
+                    </div>
+
+                    <!-- <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Consultar" name="acao" class="submit-input">
+                </form>
+            </article>
+        </section>
+
+        <section id="emitirRelatorios">
+            <article id="emitRelat" class="article-functions-box">
+                <p id="closeBtn" class="close-btn">&times;</p>
+
+                <h4>Emissão de Relatórios</h4>
+
+                <div class="menus">
+                    <button id="emitRelatVendas">Emitir Relatório de Vendas</button>
+                    <button id="emitRelatProdMaisVendidos">Emitir Relatório de Produtos Mais Vendidos</button>
+                    <button id="emitRelatProdEmFalta">Emitir Relatório de Produtos em Falta</button>
+                    <button id="emitRelatProdSemVenda">Emitir Relatório de Produtos Sem Venda</button>
+                    <button id="emitRelatProdVencidos">Emitir Relatório de Produtos Vencidos</button>
+                </div>
+                
+                <form id="formRelatVendas" action="" method="POST">
+                    <h2>Emitir Relatório de Vendas</h2>
+
+                    <div class="input-box">
+                        <label>Mensal:</label>
+                        <input type="month" name="data">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Anual:</label>
+                        <input type="number" name="data" min="1900" max="2100" placeholder="Ex.: 2025">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Período Específico:</label>
+                        <input type="datetime-local" name="data">
+                    </div>
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRelatProdMaisVendidos" action="" method="POST">
+                    <h2>Emitir Relatório <br> de Produtos Mais Vendidos</h2>
+
+                    <!-- <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.542.120-44" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRelatProdEmFalta" action="" method="POST">
+                    <h2>Emitir Relatório <br> de Produtos em Falta</h2>
+
+                    <!-- <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 523.213.654-24" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRelatProdSemVenda" action="" method="POST">
+                    <h2>Emitir Relatório <br> de Produtos Sem Venda</h2>
+
+                    <!-- <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.768.456-64" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
+                </form>
+
+                <form id="formRelatProdVencidos" action="" method="POST">
+                    <h2>Emitir Relatório <br> de Produtos Vencidos</h2>
+
+                    <!-- <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="number" name="cpf" placeholder="Ex.: 412.768.456-64" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Ex.: Mateus Calvário" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" placeholder="Ex.: (84) 92372-9724" >
+                    </div> -->
+
+                    <input type="submit" value="Emitir e baixar Relatório" name="acao" class="submit-input">
                 </form>
             </article>
         </section>
