@@ -950,6 +950,8 @@ const wp5 = document.getElementById("wp5");
 wp1.addEventListener("click", function () {
     document.body.classList.remove("wp2");
     document.body.classList.remove("wp3");
+    document.body.classList.remove("wp4");
+    document.body.classList.remove("wp5");
 
     document.body.classList.add("wp1");
 });
