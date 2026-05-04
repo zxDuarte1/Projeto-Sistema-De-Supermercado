@@ -946,12 +946,14 @@ const wp2 = document.getElementById("wp2");
 const wp3 = document.getElementById("wp3");
 const wp4 = document.getElementById("wp4");
 const wp5 = document.getElementById("wp5");
+const wp6 = document.getElementById("wp6");
 
 wp1.addEventListener("click", function () {
     document.body.classList.remove("wp2");
     document.body.classList.remove("wp3");
     document.body.classList.remove("wp4");
     document.body.classList.remove("wp5");
+    document.body.classList.remove("wp6");
 
     document.body.classList.add("wp1");
 });
@@ -961,6 +963,7 @@ wp2.addEventListener("click", function () {
     document.body.classList.remove("wp3");
     document.body.classList.remove("wp4");
     document.body.classList.remove("wp5");
+    document.body.classList.remove("wp6");
 
     document.body.classList.add("wp2");
 });
@@ -970,6 +973,7 @@ wp3.addEventListener("click", function () {
     document.body.classList.remove("wp2");
     document.body.classList.remove("wp4");
     document.body.classList.remove("wp5");
+    document.body.classList.remove("wp6");
 
     document.body.classList.add("wp3");
 });
@@ -979,6 +983,7 @@ wp4.addEventListener("click", function () {
     document.body.classList.remove("wp2");
     document.body.classList.remove("wp3");
     document.body.classList.remove("wp5");
+    document.body.classList.remove("wp6");
 
     document.body.classList.add("wp4");
 });
@@ -988,8 +993,19 @@ wp5.addEventListener("click", function () {
     document.body.classList.remove("wp2");
     document.body.classList.remove("wp3");
     document.body.classList.remove("wp4");
+    document.body.classList.remove("wp6");
 
     document.body.classList.add("wp5");
+});
+
+wp6.addEventListener("click", function () {
+    document.body.classList.remove("wp1");
+    document.body.classList.remove("wp2");
+    document.body.classList.remove("wp3");
+    document.body.classList.remove("wp4");
+    document.body.classList.remove("wp5");
+
+    document.body.classList.add("wp6");
 });
 
 // btnsWallpaper.forEach(wallpaperBtn => {
