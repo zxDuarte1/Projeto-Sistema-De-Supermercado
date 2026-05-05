@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login_style.css">
+
+</head>
+
+<body>
+
+    <div id="user_login">
+        <form>
+            <h1>Login</h1>
+            <p>Identificador</p>
+            <input type="number" name="user_id" id="user_id" placeholder="Id do usuário" required>
+            <p>Senha</p>
+            <input type="password" name="user_password" id="user_password" placeholder="Senha do usuário" required>
+            <button type="button" id="ocult_button" onclick="OcultarSenha()">Mostrar</button>
+            <a href="#" id="forgot_password">Esqueceu sua senha?</a>
+            <button type="submit" id="confirm">Confirmar</button>
+        </form>
+    </div>
+</body>
+
+</html>
