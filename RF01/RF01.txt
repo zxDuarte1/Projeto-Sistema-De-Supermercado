@@ -1,9 +1,0 @@
-RF01 – Realizar Compra:
-•	Consultar produtos 
-•	Adicionar produtos na lista
-•	Remover produtos da lista
-•	Consultar produtos vencidos
-•	Finalizar venda
-•	Executar Pagamento
-•	Executar baixa em estoque
-•	Emitir Nota Fiscal
