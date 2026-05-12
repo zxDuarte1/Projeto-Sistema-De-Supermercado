@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login_assets/Css/login_style.css">
+    <link rel="stylesheet" href="login_assets/Css/loading_screen.css">
+    <link rel="stylesheet" href="login_assets/Css/notification.css">
+
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div id="notification-screen">
+        <div class="notification"></div>
+    </div>
+    
+    <div id="register-container">
+        <h3>Não tem conta? <button id="register_button_page">Cadastre-se</button></h3>
+    </div>
+
+    <h1>Sistema de Supermercado - PDV</h1>
+    <div id="user_login">
+        <form action = "../controllers/login_controller.php" method="post">
+            <h2>Login</h2>
+            <p>Identificador:</p>
+            <input class="user_input" type="tel" name="user_id" id="user_id" maxlength="8">
+            <p>Senha:</p>
+
+            <div class="password-container">
+                <input type="password" name="user_password" id="user_password" maxlength="16">
+                <img src="login_assets/Images/olho_ocult.png" alt="login_assets/Images/olho_ocult.png" id="icon_eye">
+            </div>
+
+            <a href="forgot_password.php" id="forgot_password">Esqueceu sua senha?</a>
+            <button class="confirm_button" type="submit" id="confirm">Confirmar</button>
+        </form>
+    </div>
+    <script src="login_assets/Script/login.js"></script>
+    <script src="login_assets/Script/loading_screen.js"></script>
+    <script src="login_assets/Script/notification.js"></script>
+</body>
+</html>
