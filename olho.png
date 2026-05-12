@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="login_assets/Css/login_style.css">
+    <link rel="stylesheet" href="login_assets/Css/loading_screen.css">
+    <link rel="stylesheet" href="login_assets/Css/notification.css">
+
+</head>
+
+<?php
+if (isset($_GET['status'])) {
+    if ($_GET['status'] === 'success') {
+        echo '<script>alert("✅ Cadastro realizado com sucesso!");</script>';
+    } else {
+        $msg = isset($_GET['msg']) ? htmlspecialchars($_GET['msg']) : "Erro desconhecido";
+        echo '<script>alert("❌ Erro: ' . $msg . '");</script>';
+    }
+}
+?>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div id="notification-screen">
+        <div class="notification"></div>
+    </div>
+    <h1>Sistema de Supermercado - PDV</h1>
+    <div id="user_login">
+        <form class="formulario" action="../Controllers/cadastrarFuncionario.php" method="POST">
+            <h2>Cadastrar Funcionario</h2>
+            <p>Nome:</p>
+            <input class="user_input" type="text" name="name" id="name" maxlength="100">
+            <p>Cpf:</p>
+            <input class="user_input" type="text" name="cpf" id="cpf" maxlength="11">
+            <p>Email:</p>
+            <input class="user_input" type="email" name="user_email" id="user_email" maxlength="100">
+            <p>Telefone:</p>
+            <input class="user_input" type="tel" name="user_phone" id="user_phone" maxlength="15">
+            <p>Endereço:</p>
+            <input class="user_input" type="text" name="user_address" id="user_address" maxlength="100">
+            <p>Senha:</p>
+            <div class="password-container">
+                <input type="password" name="password" id="password" maxlength="16">
+                <img src="login_assets/Images/olho_ocult.png" alt="login_assets/Images/olho_ocult.png" id="icon_eye">
+            </div>
+
+            <p>Cargo:</p>
+            <select class="user_input" name="cargol" id="cargo">
+                <option value="" disabled selected>Selecione o cargo</option>
+                <option value="ADMIN">Admin</option>
+                <option value="GERENTE">Gerente</option>
+                <option value="CAIXA">Caixa</option>
+            </select>
+
+
+            <a href="login.php" id="forgot_password">Já tenho uma conta!</a>
+            <button class="confirm_button" type="submit" id="button_register">Registrar</button>
+        </form>
+    </div>
+
+    <script src="login_assets/Script/loading_screen.js"></script>
+    <script src="login_assets/Script/notification.js"></script>
+</body>
+
+</html>
